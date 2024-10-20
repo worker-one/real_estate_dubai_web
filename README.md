@@ -1,10 +1,8 @@
 ### **Web Application for Real Estate Evaluation**
 
----
 
 ### **User Flow**
 
----
 
 #### **1. Main Screen:**
 - **Headline (Center-Aligned):** 
@@ -12,7 +10,6 @@
 - **Button (Center-Aligned):** 
   "Начать" / "Begin"
 
----
 
 #### **2. Building Selection Screen:**
 - **Headline:** 
@@ -23,7 +20,6 @@
   - A dropdown appears with suggestions from the database, matching `project_name_en` and displaying the corresponding `master_project_en`.  
     Example: _"La Sirene, La Mer"_
 
----
 
 #### **3. Bedroom Selection Screen:**
 - **Headline:** 
@@ -33,7 +29,6 @@
   - The system only displays available options based on the building selected from the database (`rooms_en`).  
     If, for example, there’s no `Studio` in the data for a particular building, it won’t be shown.
 
----
 
 #### **4. Evaluation Results Screen:**
 - **Headline:** 
@@ -53,7 +48,6 @@
   - **Price per sqm:** Average apartment price divided by the average area (in square meters).
   - **Price per sqft:** Average apartment price divided by the average area (in square feet).
 
----
 
 #### **5. Current Estimation:**
 - **Headline:** 
@@ -61,7 +55,6 @@
 - **Estimated Value (AED):** 
   Displays the average value from `actual_worth` for all 1-bedroom units in the building _La Sirene, La Mer_ (e.g., "2,000,000 AED").
 
----
 
 #### **6. Call to Action:**
 - **Buttons:** 
@@ -70,7 +63,6 @@
   - Clicking "Order" sends a prefilled WhatsApp message to the number +971551742540 with the message:  
     _“Hi, I need more precise evaluation of my 1 bedroom in La Sirene, La Mer. Please make evaluation.”_
 
----
 
 #### **7. Detailed Table View:**
 - **Headline:** 
@@ -83,15 +75,14 @@
   - **Price (AED or USD):** `actual_worth`
   - **Price per sqm/sqft:** Calculated as `actual_worth` divided by `procedure_area`
 
----
 
 ### **Functional Requirements**
 
----
 
 #### **Design:**
-Ensure full responsiveness for mobile and desktop users.  
-Color schema: [Coolors color palette](https://coolors.co/d6d8da-d6d8da-f5f5f4-ff904d-000000)
+
+Simple and minimalist design. Ensure full responsiveness for mobile and desktop users.  
+**Color schema:** [Coolors color palette](https://coolors.co/d6d8da-d6d8da-f5f5f4-ff904d-000000)
 - Font color: `#000000`
 - Main color: `#d6d8da`
 - Secondary color: `#f5f5f4`
@@ -101,44 +92,36 @@ Color schema: [Coolors color palette](https://coolors.co/d6d8da-d6d8da-f5f5f4-ff
 - Main font: `Tw Cen MT`
 - Accent font: `Tw Cen MT Bold`
 
----
 
 #### **Multilingual Support:**
 Support Russian and English languages with seamless switching.
 
----
 
 #### **Main Screen:**
-- **"Begin" Button:** Redirects to the building selection screen.
+**"Begin" Button:** Redirects to the building selection screen.
 
----
 
 #### **Building Selection:**
 - **Search Input:** Suggests building names (`project_name_en`) as the user types, displaying `master_project_en` details.
 - **Dynamic Suggestions:** Populate data from the database in real-time.
 
----
 
 #### **Bedroom Selection:**
-- **Dynamic Dropdown:** Display only available bedroom options (`rooms_en`) for the selected building.
+**Dynamic Dropdown:** Display only available bedroom options (`rooms_en`) for the selected building.
 
----
 
 #### **Evaluation Calculation:**
 - **Size and Price:** Calculate and display the average size (`procedure_area`) and price (`actual_worth`) for the chosen building.
 - **Price per sqm/sqft:** Calculate dynamically, converting sqm to sqft (sqm * 10.76).
 
----
 
 #### **Current Estimation:**
 Display the average property value (`actual_worth`) for the selected building and room type.
 
----
 
 #### **Call to Action:**
-- **WhatsApp Button:** Sends a predefined message to +971551742540 with selected property details.
+**WhatsApp Button:** Sends a predefined message to the given number with selected property details.
 
----
 
 #### **Data Table:**
 Display data for the selected building with columns:  
@@ -150,27 +133,22 @@ Display data for the selected building with columns:
   - Price (`actual_worth`),  
   - Price per sqm/sqft.
 
----
 
 #### **Currency and Unit Switcher:**
 Toggle between AED/USD and sqm/sqft.
 
----
 
 #### **Backend Requirements:**
 - **Database:** Connect to a real-time database for building and property details.
 
----
 
 #### **Error Handling:**
 Display friendly error messages for empty datasets and validate all inputs.
 
----
 
 #### **Security:**
 Encrypt data transactions and sanitize all user inputs to prevent security vulnerabilities.
 
----
 
 ### **Attachments:**
 
